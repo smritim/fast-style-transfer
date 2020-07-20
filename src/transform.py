@@ -3,13 +3,13 @@ import tensorflow as tf, pdb
 WEIGHTS_INIT_STDEV = .1
 
 def net(image):
-    conv1 = _conv_layer(image, 32, 9, 1)
+    conv1 = _conv_layer(image, 64, 3, 1)
     conv2 = _conv_layer(conv1, 64, 3, 2)
     conv3 = _conv_layer(conv2, 128, 3, 2)
-    resid1 = _residual_block(conv3, 3)
-    resid2 = _residual_block(resid1, 3)
+    resid1 = _residual_block(conv3, 5)
+    resid2 = _residual_block(resid1,3)
     resid3 = _residual_block(resid2, 3)
-    resid4 = _residual_block(resid3, 3)
+    resid4 = _residual_block(resid3, 5)
     resid5 = _residual_block(resid4, 3)
     conv_t1 = _conv_tranpose_layer(resid5, 64, 3, 2)
     conv_t2 = _conv_tranpose_layer(conv_t1, 32, 3, 2)
