@@ -7,11 +7,11 @@ from argparse import ArgumentParser
 from utils import save_img, get_img, exists, list_files
 import evaluate
 
-CONTENT_WEIGHT = 5e0
-STYLE_WEIGHT = 1e4
+CONTENT_WEIGHT = 7e0
+STYLE_WEIGHT = 5e4
 TV_WEIGHT = 2e2
 
-LEARNING_RATE = 1e-3
+LEARNING_RATE = 2e-3
 NUM_EPOCHS = 2
 CHECKPOINT_DIR = 'checkpoints'
 CHECKPOINT_ITERATIONS = 2000
