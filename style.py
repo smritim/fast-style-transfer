@@ -7,8 +7,8 @@ from argparse import ArgumentParser
 from utils import save_img, get_img, exists, list_files
 import evaluate
 
-CONTENT_WEIGHT = 7.5e0
-STYLE_WEIGHT = 1e2
+CONTENT_WEIGHT = 5e0
+STYLE_WEIGHT = 1e4
 TV_WEIGHT = 2e2
 
 LEARNING_RATE = 1e-3
@@ -164,4 +164,5 @@ def main():
     print("Training complete. For evaluation:\n    `%s`" % cmd_text)
 
 if __name__ == '__main__':
+    
     main()
